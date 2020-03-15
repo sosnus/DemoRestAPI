@@ -1,14 +1,14 @@
 version: "3"
 services:
-  mongodb:
+  raptorsapp-database:
+    container_name: "raptorsapp-database"
     image: mongo:4.2.1
-    container_name: "mongodb"
     ports:
     - 27017:27017
-  backend:
+  raptorsapp-backend:
+    container_name: "raptorsapp-backend"
     build: .
     ports:
     - 8080:8080
     links:
-    - mongodb
-    container_name: "backend"
+    - raptorsapp-database
