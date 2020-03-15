@@ -5,9 +5,10 @@ services:
     container_name: "mongodb"
     ports:
     - 27017:27017
-  app:
-    image: raptors/raptorsappbackend
+  backend:
+    build: .
     ports:
     - 8080:8080
     links:
     - mongodb
+    container_name: "backend"
