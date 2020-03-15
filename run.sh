@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# sudo docker system prune
+# sudo docker system prune -f
 
 sudo mvn install
 sudo mvn clean package

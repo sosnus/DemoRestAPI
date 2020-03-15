@@ -7,7 +7,7 @@ services:
     - 27017:27017
   raptorsapp-backend:
     container_name: "raptorsapp-backend"
-    build: .
+    build: ./raptorsapp-backend/
     ports:
     - 8080:8080
     links:
